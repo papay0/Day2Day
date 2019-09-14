@@ -25,7 +25,7 @@ You can name it the way you want, Day2Day in my case.
 
 ### Step 2: Open Script Editor.
 
-Go to **Tools** / **Script Editor**.
+Click on **Tools** / **Script Editor**.
 ![](Images/Tuto_step2.png)
 
 ### Step 3: Copy the code.
@@ -39,19 +39,19 @@ It should now look like this:
 
 ### Step 4: Make this script run periodically.
 
-Go to **Edit** / **Current project's triggers**.
+Click on **Edit** / **Current project's triggers**.
 ![](Images/Tuto_step4.png)
 
 ### Step 5: Make this script run periodically.
 
 - Click on **Add Triger**. (bottom right)
-- Select **run** for *Choose which function to run*.
+- Select **cron** for *Choose which function to run*.
 - Keep the default choice **Head** for *Choose which deployment should run*.
 - Select **Time-driven** for *Select event source*.
 - Select **Day timer** for *Select type of time based trigger*.
 - Select **Midnight to 1am** for *Select type of time based trigger*.
 - For *Failure notification settings*, you can choose, I selected **Notify me immediately**.
-- Click **Save**/
+- Click **Save**.
 
 It should look like:
 ![](Images/Tuto_step5.png)
@@ -61,6 +61,18 @@ It should look like:
 Google might ask you to login with your current account, then to **Allow** this script to *View and manage your Google Docs documents*.
 This script needs this permission otherwise it won't be able to update automatically your document.
 
+### Step 7: Initialize the document.
+
+Go back to your Google Docs and refresh the page.
+Click on **Add-ons** / **Day2Day** / **Init Day2Day**.
+![](Images/Tuto_step7_1.png)
+
+You should see the following, with today's date:
+![](Images/Tuto_step7_2.png)
+
+You can now start writting your tasks following the same pattern as the picture on the top of this document!
+
+Enjoy!
 
 ## Motivation && Previous work
 
