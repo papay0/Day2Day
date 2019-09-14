@@ -76,6 +76,10 @@ You can now start writting your tasks following the same pattern as the picture 
 
 Enjoy! 🥳
 
+## What if I want to update Day2Day to a new version?
+
+Easy, just open Tools / Script Editor and replace all the code with this [code](https://raw.githubusercontent.com/papay0/Day2Day/master/Code.gs).
+
 ## Motivation && Previous work
 
 I am using the Google Docs for daily tasks for a few years now.
