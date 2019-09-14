@@ -18,9 +18,12 @@ The script will be run automatically every weekday between midnight and 1am, wil
 
 ## Setup
 
-## Previous work
+## Motivation && Previous work
 
-## Motivation
+I am using the Google Docs for daily tasks for a few years now but I always found it too much to copy paste the previous day, to remove the completed tasks, every single day. (Yes, I like automation!)
+
+So I wrote a React webapp to do this job for me, the code is available [here](https://github.com/papay0/day-to-day).
+But after a while it became too complex for the simple task manager I needed.
 
 ## Improvement
 
