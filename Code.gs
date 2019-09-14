@@ -1,8 +1,8 @@
 function onOpen() {
   DocumentApp.getUi()
-  .createAddonMenu()
-  .addItem("Init Day2Day", "run")
-  .addToUi();
+    .createAddonMenu()
+    .addItem("Init Day2Day", "run")
+    .addToUi();
 }
 
 function getToday() {
@@ -26,7 +26,7 @@ function getHeadingIndexes() {
       }
     }
   }
-  return {"first": indexFirstHeading, "second": indexSecondHeading};
+  return { first: indexFirstHeading, second: indexSecondHeading };
 }
 
 function copyTasks() {
@@ -40,16 +40,16 @@ function copyTasks() {
     var heading = body.insertParagraph(firstHeadingIndex, getToday());
   }
   numberOfInsert += 1;
-  heading.setHeading(DocumentApp.ParagraphHeading.HEADING1)
+  heading.setHeading(DocumentApp.ParagraphHeading.HEADING1);
   var numberOfInsert = 0;
   for (var i = secondHeadingIndex; i > firstHeadingIndex; i--) {
-    var child = body.getChild(i+numberOfInsert);
+    var child = body.getChild(i + numberOfInsert);
     if (child.getType() == DocumentApp.ElementType.LIST_ITEM) {
       var listItem = child.asListItem().copy();
       var attributes = listItem.getAttributes();
       var isTaskCompleted = attributes.STRIKETHROUGH != null;
       if (!isTaskCompleted) {
-        body.insertListItem(firstHeadingIndex + 1, listItem)
+        body.insertListItem(firstHeadingIndex + 1, listItem);
         numberOfInsert += 1;
       }
     }
@@ -60,10 +60,10 @@ function replaceDateByLabels() {
   var body = DocumentApp.getActiveDocument().getBody();
   var paragraphs = body.getParagraphs();
   for (var i = 0; i < paragraphs.length; i++) {
-    var paragraph = paragraphs[i]
+    var paragraph = paragraphs[i];
     if (paragraph.getHeading() == DocumentApp.ParagraphHeading.HEADING1) {
       var today = getToday();
-      var todayString = " - Today"
+      var todayString = " - Today";
       if (paragraph.getText().indexOf(todayString) > -1) {
         paragraph.replaceText("- Today", "");
       }
@@ -79,10 +79,10 @@ function initDoc() {
   var paragraphs = body.getParagraphs();
   var title = body.getChild(0).asParagraph();
   Logger.log(title);
-  try{
+  try {
     body.removeChild(title);
-  }catch(e){}
-  var newTitle = body.insertParagraph(0, "Day2Day")
+  } catch (e) {}
+  var newTitle = body.insertParagraph(0, "Day2Day");
   newTitle.setHeading(DocumentApp.ParagraphHeading.TITLE);
   newTitle.setAlignment(DocumentApp.HorizontalAlignment.CENTER);
 }
