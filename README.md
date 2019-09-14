@@ -72,9 +72,9 @@ Click on **Add-ons** / **Day2Day** / **Init Day2Day**.
 You should see the following, with today's date:
 ![](Images/Tuto_step7_2.png)
 
-You can now start writting your tasks following the same pattern as the picture on the top of this document!
+You can now start writting your tasks following the same pattern as the picture on the top of this document, ie using bulleted list.
 
-Enjoy!
+Enjoy! 🥳
 
 ## Motivation && Previous work
 
