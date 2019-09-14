@@ -92,11 +92,13 @@ function shouldRun() {
   return day != 6 && day != 0;
 }
 
-function run() {
-  if (!shouldRun()) {
-    return;
+function cron() {
+  if (shouldRun()) {
+    run();
   }
+}
 
+function run() {
   initDoc();
   copyTasks();
   replaceDateByLabels();
