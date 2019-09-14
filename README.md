@@ -35,7 +35,8 @@ Copy the content of this [file](https://raw.githubusercontent.com/papay0/Day2Day
 You can name it the way you want, Day2Day in my case.
 
 It should now look like this:
-![](Images/Tuto_step3.png)
+
+<img src="Images/Tuto_step3.png" alt="step 3" height="800"/>
 
 ### Step 4: Make this script run periodically.
 
@@ -54,7 +55,8 @@ Click on **Edit** / **Current project's triggers**.
 - Click **Save**.
 
 It should look like:
-![](Images/Tuto_step5.png)
+
+<img src="Images/Tuto_step5.png" alt="step 5" height="500"/>
 
 ### Step 6: Give permissions.
 
