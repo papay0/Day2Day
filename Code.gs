@@ -78,13 +78,12 @@ function initDoc() {
   var body = DocumentApp.getActiveDocument().getBody();
   var paragraphs = body.getParagraphs();
   var title = body.getChild(0).asParagraph();
-  Logger.log(title);
-  try {
-    body.removeChild(title);
-  } catch (e) {}
-  var newTitle = body.insertParagraph(0, "Day2Day");
-  newTitle.setHeading(DocumentApp.ParagraphHeading.TITLE);
-  newTitle.setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+  var brandingTitle = "Day2Day";
+  if (title.getText() != brandingTitle) {
+    var newTitle = body.insertParagraph(0, brandingTitle);
+    newTitle.setHeading(DocumentApp.ParagraphHeading.TITLE);
+    newTitle.setAlignment(DocumentApp.HorizontalAlignment.CENTER);
+  }
 }
 
 function shouldRun() {
