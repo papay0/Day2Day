@@ -5,6 +5,9 @@ function onOpen() {
     .addToUi();
 }
 
+// I know that this is not localized, but
+// new Date().toLocaleDateString('', {  weekday: 'long' });
+// is not returning the expected result.
 function getToday() {
   var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
   var date = new Date();
@@ -67,6 +70,8 @@ function copyTasks() {
 function replaceDateByLabels() {
   var body = DocumentApp.getActiveDocument().getBody();
   var paragraphs = body.getParagraphs();
+  var yesterdayIsReplaced = false;
+  var todayIsReplaced = false;
   for (var i = 0; i < paragraphs.length; i++) {
     var paragraph = paragraphs[i];
     if (paragraph.getHeading() == DocumentApp.ParagraphHeading.HEADING1) {
@@ -74,10 +79,15 @@ function replaceDateByLabels() {
       var todayString = " - Today";
       if (paragraph.getText().indexOf(todayString) > -1) {
         paragraph.replaceText("- Today", "");
+        yesterdayIsReplaced = true;
       }
       if (paragraph.getText() == today) {
         paragraph.replaceText(today, today + todayString);
+        todayIsReplaced = true;
       }
+    }
+    if (yesterdayIsReplaced == true && todayIsReplaced == true) {
+      break;
     }
   }
 }
