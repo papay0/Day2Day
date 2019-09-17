@@ -6,7 +6,11 @@ function onOpen() {
 }
 
 function getToday() {
-  return new Date().toLocaleDateString();
+  var days = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+  var date = new Date();
+  var dayIndex = date.getDay();
+  var dayString = days[dayIndex];
+  return dayString + " " + date.toLocaleDateString();
 }
 
 function getHeadingIndexes() {
