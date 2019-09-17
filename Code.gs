@@ -48,6 +48,10 @@ function copyTasks() {
       var listItem = child.asListItem().copy();
       var attributes = listItem.getAttributes();
       var isTaskCompleted = attributes.STRIKETHROUGH != null;
+      if (numberOfInsert == 0) {
+        body.insertParagraph(firstHeadingIndex + 1, "");
+        numberOfInsert += 1;
+      }
       if (!isTaskCompleted) {
         body.insertListItem(firstHeadingIndex + 1, listItem);
         numberOfInsert += 1;
