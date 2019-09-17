@@ -30,9 +30,9 @@ Click on **Tools** / **Script Editor**.
 
 ### Step 3: Copy the code.
 
-Delete all code.
-Copy the content of this [file](https://raw.githubusercontent.com/papay0/Day2Day/master/Code.gs) and paste it in the Script Editor tab.
-You can name it the way you want, Day2Day in my case.
+1. Delete all code.
+2. Copy the content of this [file](https://raw.githubusercontent.com/papay0/Day2Day/master/Code.gs) and paste it in the Script Editor tab.
+3. You can name it the way you want, Day2Day in my case.
 
 It should now look like this:
 
@@ -45,18 +45,21 @@ Click on **Edit** / **Current project's triggers**.
 
 ### Step 5: Make this script run periodically.
 
-- Click on **Add Triger**. (bottom right)
-- Select **cron** for *Choose which function to run*.
-- Keep the default choice **Head** for *Choose which deployment should run*.
-- Select **Time-driven** for *Select event source*.
-- Select **Day timer** for *Select type of time based trigger*.
-- Select **Midnight to 1am** for *Select type of time based trigger*.
-- For *Failure notification settings*, you can choose, I selected **Notify me immediately**.
-- Click **Save**.
+1. Click on **Add Triger**. (bottom right)
 
 It should look like:
 
 <img src="Images/Tuto_step5.png" alt="step 5" height="500"/>
+
+or here are the written instructions:
+
+2. Select **cron** for *Choose which function to run*.
+3. Keep the default choice **Head** for *Choose which deployment should run*.
+4. Select **Time-driven** for *Select event source*.
+5. Select **Day timer** for *Select type of time based trigger*.
+6. Select **Midnight to 1am** for *Select type of time based trigger*.
+7. For *Failure notification settings*, you can choose, I selected **Notify me immediately**.
+8. Click **Save**.
 
 ### Step 6: Give permissions.
 
