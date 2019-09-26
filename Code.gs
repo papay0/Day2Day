@@ -57,9 +57,12 @@ function copyTasks() {
       var isTaskCompleted = attributes.STRIKETHROUGH != null;
       if (numberOfInsert == 0) {
         body.insertParagraph(firstHeadingIndex + 1, "");
-        var emptyBulletPoint = body.insertListItem(firstHeadingIndex + 1, "");
-        emptyBulletPoint.setGlyphType(DocumentApp.GlyphType.BULLET);
-        numberOfInsert += 2;
+        if (listItem.getText() !== "") {
+          var emptyBulletPoint = body.insertListItem(firstHeadingIndex + 1, "");
+          emptyBulletPoint.setGlyphType(DocumentApp.GlyphType.BULLET);
+          numberOfInsert += 1;
+        }
+        numberOfInsert += 1;
       }
       if (!isTaskCompleted) {
         body.insertListItem(firstHeadingIndex + 1, listItem);
