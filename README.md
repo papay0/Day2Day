@@ -38,12 +38,17 @@ It should now look like this:
 
 <img src="Images/Tuto_step3.png" alt="step 3" height="800"/>
 
-### Step 4: Make this script run periodically.
+### Step 4: Check your timezone.
+
+Click on **File** / **Project properties**.
+Update the timezone under **Info** / **Time zone** to your local timezone.
+
+### Step 5: Make this script run periodically.
 
 Click on **Edit** / **Current project's triggers**.
 ![](Images/Tuto_step4.png)
 
-### Step 5: Make this script run periodically.
+### Step 6: Make this script run periodically.
 
 1. Click on **Add Triger**. (bottom right)
 
@@ -61,12 +66,12 @@ or here are the written instructions:
 7. For *Failure notification settings*, you can choose, I selected **Notify me immediately**.
 8. Click **Save**.
 
-### Step 6: Give permissions.
+### Step 7: Give permissions.
 
 Google might ask you to login with your current account, then to **Allow** this script to *View and manage your Google Docs documents*.
 This script needs this permission otherwise it won't be able to update automatically your document.
 
-### Step 7: Initialize the document.
+### Step 8: Initialize the document.
 
 Go back to your Google Docs and refresh the page.
 Click on **Add-ons** / **Day2Day** / **Init Day2Day**.
