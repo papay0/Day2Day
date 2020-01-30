@@ -99,7 +99,7 @@ But after a while it became too complex for the simple task manager I needed.
 Quick demo:
 ![](Images/Demo_daytoday.gif)
 
-There is also support to easily build a **Promo package**, often used in tech companies.
+There also support to easily build a **Promo package**, often used in tech companies.
 When Promo comes, instead of spending a week looking for your best commits/documents, you could just write it the Promo section using markdown.
 
 So after giving up on my webapp, I went back to my simple Google Docs and wrote the automation using **Google Apps Script**. ❤️
